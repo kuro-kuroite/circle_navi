@@ -23,8 +23,9 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|ts)$/,
         exclude: path.resolve(__dirname, 'node_modules'),
+        include: path.resolve(__dirname, 'node_modules/googleapis'),
         use: [
           {
             loader: 'babel-loader',
@@ -32,6 +33,10 @@ module.exports = {
         ],
       },
     ],
+  },
+
+  externals: {
+    googleapis: 'commonjs googleapis',
   },
 
   target: 'node',

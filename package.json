@@ -79,6 +79,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
+    "bluebird": "^3.5.3",
     "googleapis": "^35.0.0"
   },
   "license": "MIT"

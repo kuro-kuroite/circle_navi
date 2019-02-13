@@ -3,6 +3,7 @@
     "babel:compile": "yarn babel src/js/**/*.js --out-dir lib --source-maps inline",
     "babel:watch": "yarn babel src/js/**/*.js --watch --out-dir lib --source-maps inline",
     "deploy": "yarn webpack --mode=production",
+    "deploy:sandbox": "yarn babel sandbox --out-dir tmp",
     "dev:ignore:all": "run-p dev:ignore:*:cat",
     "// HACK dev:ignore:all:sanitize": "& : を加えたのは，lint-staged からくるファイル名の引数を排除するため(& : path/to/file)",
     "dev:ignore:all:sanitize": "yarn dev:ignore:all & : ",

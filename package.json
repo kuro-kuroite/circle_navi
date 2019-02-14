@@ -10,8 +10,8 @@
     "dev:ignore:eslint:cat": "cat .gitignore .prettierignore .eslintignore > tmp/._eslintignore & : ",
     "dev:ignore:prettier:cat": "cat .gitignore .prettierignore > tmp/._prettierignore & : ",
     "dev:watch": "yarn watch:all",
-    "eslint:fix": "yarn eslint src/js/**/*.js --fix",
-    "eslint:fix:dry": "yarn eslint src/js/**/*.js --fix-dry-run",
+    "eslint:fix": "yarn eslint src/js --fix",
+    "eslint:fix:dry": "yarn eslint src/js --fix-dry-run",
     "// [add csslint:fix, csslint:fix:dry]": "can add files like css",
     "// [describe format:lint:watch:all]": "trigger all files are formatted and linted in realtime",
     "format:lint:watch:all": "run-p dev:ignore:all lint:watch:all",
@@ -27,6 +27,7 @@
     "lint:watch": "yarn lint:watch:all",
     "lint:watch:all": "watch \"yarn lint:all\" .",
     "pop-stash": "git stash && git stash pop stash@{1} && git read-tree stash && git stash drop",
+    "postinstall": "npx patch-package",
     "prettier:all": "run-p prettier:*:fix",
     "prettier:all:dry": "run-p prettier:*:fix:dry",
     "prettier:config:fix": "yarn prettier --write * --ignore-path tmp/._prettierignore",
@@ -81,12 +82,14 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
-    "actions-on-google": "^2.5.0",
     "bluebird": "^3.5.3",
-    "date-fns": "^1.29.0",
-    "firebase-admin": "^6.2.0",
-    "firebase-functions": "^2.1.0",
-    "googleapis": "^35.0.0"
+    "date-fns": "2.0.0-alpha.25",
+    "dotenv": "^6.2.0",
+    "mini-google-home-notifier": "https://github.com/kuro-kuroite/mini-google-home-notifier.git",
+    "mini-googlecalendar-event": "https://github.com/kuro-kuroite/mini-googlecalendar-event.git",
+    "mini-openweathermap": "https://github.com/kuro-kuroite/mini-openweathermap.git",
+    "mini-promisify-googlecalendar": "https://github.com/kuro-kuroite/mini-promisify-googlecalendar.git",
+    "shelljs": "^0.8.3"
   },
   "license": "MIT"
 }

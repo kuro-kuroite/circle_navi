@@ -208,3 +208,24 @@ fabric.properties
 tmp
 
 
+### Vagrant
+
+# General
+.vagrant/
+
+# Log files (if you are creating logs in debug mode, uncomment this)
+# *.logs
+
+
+# for mini-promisify-googlecalendar API SECRET
+client_secret.json
+token.json
+
+# for API KEY
+.env
+
+
+# for deploy:sandbox
+sandbox
+
+

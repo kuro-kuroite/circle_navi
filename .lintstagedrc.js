@@ -23,6 +23,9 @@ module.exports = {
       "yarn fixpack",
       "git add",
     ],
+    "*.{json,yml}": [
+      "git add",
+    ],
     "*.{md}": [
       "git add",
     ],

@@ -6,14 +6,14 @@ import generateSpeakString from './generate_speak_string';
 
 configEnv();
 
-const { GOOGLE_HOME_NAME_OR_IP, LANGUAGE } = process.env;
+const { GOOGLE_HOME_NAME, LANGUAGE } = process.env;
 
 const optionDefinitions = [
   {
     name: 'events',
     alias: 'E',
-    defaultValue: 'events.json',
     type: String,
+    defaultValue: 'events.json',
     description: 'absolute json file path about events',
   },
   {
@@ -34,7 +34,8 @@ const optionDefinitions = [
 const sections = [
   {
     header: 'circle navi',
-    content: 'this is collect weather and event data and generate content',
+    content:
+      'this is collect weather and event data and generate content to speak',
   },
   {
     header: 'Options',
@@ -52,7 +53,7 @@ const eventsPath = path.resolve(__dirname, '../', options.events);
 const weathersPath = path.resolve(__dirname, '../', options.weathers);
 
 export default async function speak(message) {
-  const myHome = new GoogleHomeNotifier(GOOGLE_HOME_NAME_OR_IP, {
+  const myHome = new GoogleHomeNotifier(GOOGLE_HOME_NAME, {
     language: LANGUAGE,
   });
 
@@ -62,7 +63,7 @@ export default async function speak(message) {
 (async () => {
   try {
     // eslint-disable-next-line no-console
-    await speak(await generateSpeakString(eventsPath, weathersPath));
+    console.log(await generateSpeakString(eventsPath, weathersPath));
   } catch (e) {
     // eslint-disable-next-line no-console
     console.log(e);

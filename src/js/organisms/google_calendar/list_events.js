@@ -1,7 +1,7 @@
-import { google } from 'mini-promisify-googlecalendar';
-import { endOfDay } from 'date-fns';
+import { google } from '@kuro-kuroite/mini-promisify-googlecalendar';
+import { dateFns } from '@kuro-kuroite/prelude';
 
-const listEvents = (auth, startAt, endAt = endOfDay(startAt)) =>
+const listEvents = (auth, startAt, endAt = dateFns.endOfDay(startAt)) =>
   new Promise((resolve, reject) => {
     const calendar = google.calendar('v3');
 

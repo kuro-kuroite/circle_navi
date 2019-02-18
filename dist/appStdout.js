@@ -23,13 +23,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 (0, _prelude.configEnv)();
 var _process$env = process.env,
-    GOOGLE_HOME_NAME_OR_IP = _process$env.GOOGLE_HOME_NAME_OR_IP,
+    GOOGLE_HOME_NAME = _process$env.GOOGLE_HOME_NAME,
     LANGUAGE = _process$env.LANGUAGE;
 var optionDefinitions = [{
   name: 'events',
   alias: 'E',
-  defaultValue: 'events.json',
   type: String,
+  defaultValue: 'events.json',
   description: 'absolute json file path about events'
 }, {
   name: 'weathers',
@@ -45,7 +45,7 @@ var optionDefinitions = [{
 }];
 var sections = [{
   header: 'circle navi',
-  content: 'this is collect weather and event data and generate content'
+  content: 'this is collect weather and event data and generate content to speak'
 }, {
   header: 'Options',
   optionList: optionDefinitions
@@ -69,7 +69,7 @@ function _speak() {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
-            myHome = new _miniGoogleHomeNotifier.GoogleHomeNotifier(GOOGLE_HOME_NAME_OR_IP, {
+            myHome = new _miniGoogleHomeNotifier.GoogleHomeNotifier(GOOGLE_HOME_NAME, {
               language: LANGUAGE
             });
             _context2.next = 3;
@@ -93,29 +93,28 @@ regeneratorRuntime.mark(function _callee() {
       switch (_context.prev = _context.next) {
         case 0:
           _context.prev = 0;
-          _context.t0 = speak;
+          _context.t0 = console;
           _context.next = 4;
           return (0, _generate_speak_string.default)(eventsPath, weathersPath);
 
         case 4:
           _context.t1 = _context.sent;
-          _context.next = 7;
-          return (0, _context.t0)(_context.t1);
 
-        case 7:
-          _context.next = 12;
+          _context.t0.log.call(_context.t0, _context.t1);
+
+          _context.next = 11;
           break;
 
-        case 9:
-          _context.prev = 9;
+        case 8:
+          _context.prev = 8;
           _context.t2 = _context["catch"](0);
           // eslint-disable-next-line no-console
           console.log(_context.t2);
 
-        case 12:
+        case 11:
         case "end":
           return _context.stop();
       }
     }
-  }, _callee, this, [[0, 9]]);
+  }, _callee, this, [[0, 8]]);
 }))();

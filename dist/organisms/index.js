@@ -6,10 +6,8 @@ Object.defineProperty(exports, "__esModule", {
 Object.defineProperty(exports, "listEvents", {
   enumerable: true,
   get: function get() {
-    return _organisms.listEvents;
+    return _google_calendar.listEvents;
   }
 });
 
-require("@babel/polyfill");
-
-var _organisms = require("./organisms");
+var _google_calendar = require("./google_calendar");

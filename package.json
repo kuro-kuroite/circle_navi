@@ -2,6 +2,7 @@
   "name": "circle_navi",
   "version": "0.0.1-alpha.1",
   "dependencies": {
+    "@babel/polyfill": "^7.2.5",
     "@kuro-kuroite/mini-google-home-notifier": "https://github.com/kuro-kuroite/mini-google-home-notifier.git#feature/future",
     "@kuro-kuroite/mini-googlecalendar-event": "https://github.com/kuro-kuroite/mini-googlecalendar-event.git#feature/future",
     "@kuro-kuroite/mini-openweathermap": "https://github.com/kuro-kuroite/mini-openweathermap.git#feature/future",

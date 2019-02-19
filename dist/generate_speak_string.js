@@ -18,7 +18,7 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 (0, _prelude.configEnv)();
-var LANGUAGE = process.env.LANGUAGE;
+var REGION = process.env.REGION;
 
 function generateSpeakString(_x, _x2) {
   return _generateSpeakString.apply(this, arguments);
@@ -42,7 +42,7 @@ function _generateSpeakString() {
             _context.t1 = _context.sent;
             events = _context.t0.parse.call(_context.t0, _context.t1);
             eventList = new _miniGooglecalendarEvent.CalendarEventList(events, {
-              language: LANGUAGE
+              region: REGION
             });
             _context.t2 = JSON;
             _context.next = 10;

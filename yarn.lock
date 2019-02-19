@@ -795,10 +795,9 @@
 
 "@kuro-kuroite/mini-googlecalendar-event@https://github.com/kuro-kuroite/mini-googlecalendar-event.git#feature/future":
   version "0.0.1-alpha.1"
-  resolved "https://github.com/kuro-kuroite/mini-googlecalendar-event.git#b8145b45c708a9ac4d7fca2d3cb1224668588673"
+  resolved "https://github.com/kuro-kuroite/mini-googlecalendar-event.git#f75812dcaab509be9bd3a818de41d761e45169ed"
   dependencies:
-    date-fns "^2.0.0-alpha.25"
-    date-fns-tz "^1.0.0"
+    "@kuro-kuroite/prelude" "https://github.com/kuro-kuroite/prelude.git#feature/future"
 
 "@kuro-kuroite/mini-openweathermap@https://github.com/kuro-kuroite/mini-openweathermap.git#feature/future":
   version "0.0.1-alpha.1"

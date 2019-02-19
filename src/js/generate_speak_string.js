@@ -5,12 +5,12 @@ import { OpenWeatherMapForecastList } from '@kuro-kuroite/mini-openweathermap';
 
 configEnv();
 
-const { LANGUAGE } = process.env;
+const { REGION } = process.env;
 
 export default async function generateSpeakString(eventFile, openWeatherFile) {
   const message = new StringBuffer();
   const events = JSON.parse(await fsAsync.readFile(eventFile, 'utf8'));
-  const eventList = new CalendarEventList(events, { language: LANGUAGE });
+  const eventList = new CalendarEventList(events, { region: REGION });
   const openWeather = JSON.parse(
     await fsAsync.readFile(openWeatherFile, 'utf8'),
   );

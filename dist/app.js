@@ -1,19 +1,14 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = speak;
-
 require("@babel/polyfill");
 
 var _path = _interopRequireDefault(require("path"));
 
 var _prelude = require("@kuro-kuroite/prelude");
 
-var _miniGoogleHomeNotifier = require("@kuro-kuroite/mini-google-home-notifier");
-
 var _generate_speak_string = _interopRequireDefault(require("./generate_speak_string"));
+
+var _index = require("./index");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21,10 +16,6 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-(0, _prelude.configEnv)();
-var _process$env = process.env,
-    GOOGLE_HOME_NAME_OR_IP = _process$env.GOOGLE_HOME_NAME_OR_IP,
-    LANGUAGE = _process$env.LANGUAGE;
 var optionDefinitions = [{
   name: 'events',
   alias: 'E',
@@ -56,35 +47,6 @@ var eventsPath = _path.default.resolve(__dirname, '../', options.events);
 
 var weathersPath = _path.default.resolve(__dirname, '../', options.weathers);
 
-function speak(_x) {
-  return _speak.apply(this, arguments);
-}
-
-function _speak() {
-  _speak = _asyncToGenerator(
-  /*#__PURE__*/
-  regeneratorRuntime.mark(function _callee2(message) {
-    var myHome;
-    return regeneratorRuntime.wrap(function _callee2$(_context2) {
-      while (1) {
-        switch (_context2.prev = _context2.next) {
-          case 0:
-            myHome = new _miniGoogleHomeNotifier.GoogleHomeNotifier(GOOGLE_HOME_NAME_OR_IP, {
-              language: LANGUAGE
-            });
-            _context2.next = 3;
-            return myHome.speak(message);
-
-          case 3:
-          case "end":
-            return _context2.stop();
-        }
-      }
-    }, _callee2, this);
-  }));
-  return _speak.apply(this, arguments);
-}
-
 _asyncToGenerator(
 /*#__PURE__*/
 regeneratorRuntime.mark(function _callee() {
@@ -93,7 +55,7 @@ regeneratorRuntime.mark(function _callee() {
       switch (_context.prev = _context.next) {
         case 0:
           _context.prev = 0;
-          _context.t0 = speak;
+          _context.t0 = _index.speak;
           _context.next = 4;
           return (0, _generate_speak_string.default)(eventsPath, weathersPath);
 

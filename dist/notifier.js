@@ -4,9 +4,7 @@ require("@babel/polyfill");
 
 var _prelude = require("@kuro-kuroite/prelude");
 
-var _app = _interopRequireDefault(require("./app"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _index = require("./index");
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -42,7 +40,7 @@ regeneratorRuntime.mark(function _callee() {
         case 0:
           _context.prev = 0;
           _context.next = 3;
-          return (0, _app.default)(options.message);
+          return (0, _index.speak)(options.message);
 
         case 3:
           _context.next = 8;

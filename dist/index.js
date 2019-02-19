@@ -9,6 +9,12 @@ Object.defineProperty(exports, "listEvents", {
     return _organisms.listEvents;
   }
 });
+Object.defineProperty(exports, "speak", {
+  enumerable: true,
+  get: function get() {
+    return _organisms.speak;
+  }
+});
 
 require("@babel/polyfill");
 

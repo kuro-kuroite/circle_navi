@@ -1,12 +1,8 @@
 import '@babel/polyfill';
 import path from 'path';
-import { configCommandLineArgs, configEnv } from '@kuro-kuroite/prelude';
-import { GoogleHomeNotifier } from '@kuro-kuroite/mini-google-home-notifier';
+import { configCommandLineArgs } from '@kuro-kuroite/prelude';
 import generateSpeakString from './generate_speak_string';
-
-configEnv();
-
-const { GOOGLE_HOME_NAME_OR_IP, LANGUAGE } = process.env;
+import { speak } from './index';
 
 const optionDefinitions = [
   {
@@ -50,14 +46,6 @@ const options = configCommandLineArgs(
 
 const eventsPath = path.resolve(__dirname, '../', options.events);
 const weathersPath = path.resolve(__dirname, '../', options.weathers);
-
-export default async function speak(message) {
-  const myHome = new GoogleHomeNotifier(GOOGLE_HOME_NAME_OR_IP, {
-    language: LANGUAGE,
-  });
-
-  await myHome.speak(message);
-}
 
 (async () => {
   try {

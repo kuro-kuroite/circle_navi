@@ -1,6 +1,6 @@
 import '@babel/polyfill';
 import { configCommandLineArgs } from '@kuro-kuroite/prelude';
-import speak from './app';
+import { speak } from './index';
 
 const optionDefinitions = [
   {

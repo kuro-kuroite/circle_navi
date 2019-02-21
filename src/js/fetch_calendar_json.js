@@ -14,12 +14,14 @@ const clientSecretPath = path
   .resolve(__dirname, '../', process.env.CLIENT_SECRET_PATH)
   .toString();
 
-export default async function main(fileName = 'events.json') {
+export default async function main(
+  fileName = path.resolve(__dirname, '../', 'events.json'),
+) {
   const auth = await withAuthorize(tokenPath, clientSecretPath);
 
   const events = await listEvents(auth, new Date().toISOString());
 
-  await fsAsync.writeFile(fileName, JSON.stringify(events));
+  await fsAsync.writeFile(fileName, JSON.stringify(events, null, '  '));
 }
 
 (async () => {

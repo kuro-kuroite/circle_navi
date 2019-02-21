@@ -45,7 +45,7 @@ function _main() {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
-            fileName = _args2.length > 0 && _args2[0] !== undefined ? _args2[0] : 'events.json';
+            fileName = _args2.length > 0 && _args2[0] !== undefined ? _args2[0] : _path.default.resolve(__dirname, '../', 'events.json');
             _context2.next = 3;
             return (0, _miniPromisifyGooglecalendar.withAuthorize)(tokenPath, clientSecretPath);
 
@@ -57,7 +57,7 @@ function _main() {
           case 6:
             events = _context2.sent;
             _context2.next = 9;
-            return _prelude.fsAsync.writeFile(fileName, JSON.stringify(events));
+            return _prelude.fsAsync.writeFile(fileName, JSON.stringify(events, null, '  '));
 
           case 9:
           case "end":

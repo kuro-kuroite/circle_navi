@@ -7,9 +7,13 @@ exports.default = main;
 
 require("@babel/polyfill");
 
+var _path = _interopRequireDefault(require("path"));
+
 var _prelude = require("@kuro-kuroite/prelude");
 
 var _miniOpenweathermap = require("@kuro-kuroite/mini-openweathermap");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -37,7 +41,7 @@ function _main() {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
-            fileName = _args2.length > 0 && _args2[0] !== undefined ? _args2[0] : 'weathers.json';
+            fileName = _args2.length > 0 && _args2[0] !== undefined ? _args2[0] : _path.default.resolve(__dirname, '../', 'weathers.json');
             openWeatherMapProxy = new _miniOpenweathermap.OpenWeatherMapProxy(OPEN_WEATHER_MAP_KEY, {
               city: OPEN_WEATHER_MAP_CITY,
               lang: LANGUAGE
@@ -48,7 +52,7 @@ function _main() {
           case 4:
             openWeather = _context2.sent;
             _context2.next = 7;
-            return _prelude.fsAsync.writeFile(fileName, JSON.stringify(openWeather));
+            return _prelude.fsAsync.writeFile(fileName, JSON.stringify(openWeather, null, '  '));
 
           case 7:
           case "end":

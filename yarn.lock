@@ -795,7 +795,7 @@
 
 "@kuro-kuroite/mini-googlecalendar-event@https://github.com/kuro-kuroite/mini-googlecalendar-event.git#feature/future":
   version "0.0.1-alpha.1"
-  resolved "https://github.com/kuro-kuroite/mini-googlecalendar-event.git#f75812dcaab509be9bd3a818de41d761e45169ed"
+  resolved "https://github.com/kuro-kuroite/mini-googlecalendar-event.git#59a1fbe01bb5dff960aa6d3e73c3bd47e06d9844"
   dependencies:
     "@kuro-kuroite/prelude" "https://github.com/kuro-kuroite/prelude.git#feature/future"
 
@@ -820,7 +820,7 @@
 
 "@kuro-kuroite/prelude@https://github.com/kuro-kuroite/prelude.git#feature/future":
   version "0.0.1-alpha.1"
-  resolved "https://github.com/kuro-kuroite/prelude.git#eaa92c0f7baa4d97eceed468e9aec59c513f9478"
+  resolved "https://github.com/kuro-kuroite/prelude.git#237bb4e316b6bf657090a464b2b26b63fd0288e3"
   dependencies:
     bluebird "^3.5.3"
     command-line-args "^5.0.2"
@@ -1545,7 +1545,7 @@ dargs@^4.0.1:
   dependencies:
     number-is-nan "^1.0.0"
 
-date-fns-tz@^1.0.0, date-fns-tz@^1.0.3, date-fns-tz@^1.0.7:
+date-fns-tz@^1.0.3, date-fns-tz@^1.0.7:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/date-fns-tz/-/date-fns-tz-1.0.7.tgz#1c80f7592cca5da4fd2085132936dcc7fa9afecd"
   integrity sha512-oNfi/3IxRfmysRIT+QJMbO/44Uj10nApAYJvlayTmNRFZG+JqdOJYXm1DWU65DNlG/ySbuQwpFkGIa3b2XFUVw==
@@ -1559,11 +1559,6 @@ date-fns@^1.27.2:
   version "1.30.1"
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-1.30.1.tgz#2e71bf0b119153dbb4cc4e88d9ea5acfb50dc05c"
   integrity sha512-hBSVCvSmWC+QypYObzwGOd9wqdDpOt+0wl0KbU+R+uuZBS1jN8VsD1ss3irQDknRj5NvxiTF6oj/nDRnN/UQNw==
-
-date-fns@^2.0.0-alpha.25:
-  version "2.0.0-alpha.27"
-  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.0.0-alpha.27.tgz#5ecd4204ef0e7064264039570f6e8afbc014481c"
-  integrity sha512-cqfVLS+346P/Mpj2RpDrBv0P4p2zZhWWvfY5fuWrXNR/K38HaAGEkeOwb47hIpQP9Jr/TIxjZ2/sNMQwdXuGMg==
 
 debug@^2.1.0, debug@^2.1.2, debug@^2.2.0, debug@^2.3.3, debug@^2.6.8, debug@^2.6.9:
   version "2.6.9"

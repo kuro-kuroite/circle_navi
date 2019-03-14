@@ -79,6 +79,7 @@ GOOGLE_HOME_NAME_OR_IP=192.168.1.172
 ```
 
 - `node dist/app.js`で実行
+(実際は，generate_speak_string.jsが以下のような文章を生成し，Google Homeがその内容を発話する)
 
 サンプル例の場合
 

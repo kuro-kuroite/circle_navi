@@ -23,11 +23,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 (0, _prelude.configEnv)();
 
-var tokenPath = _path.default.resolve(__dirname, '../', process.env.TOKEN_PATH).toString();
+var tokenPath = _path.default.resolve(__dirname, '../', process.env.TOKEN_PATH);
 
-console.log(tokenPath);
-
-var clientSecretPath = _path.default.resolve(__dirname, '../', process.env.CLIENT_SECRET_PATH).toString();
+var clientSecretPath = _path.default.resolve(__dirname, '../', process.env.CLIENT_SECRET_PATH);
 
 function main() {
   return _main.apply(this, arguments);

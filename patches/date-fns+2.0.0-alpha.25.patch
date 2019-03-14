@@ -1,0 +1,13 @@
+diff --git a/node_modules/date-fns/locale/ja/_lib/formatLong/index.js b/node_modules/date-fns/locale/ja/_lib/formatLong/index.js
+index 710e022..c2cdbcc
+--- a/node_modules/date-fns/locale/ja/_lib/formatLong/index.js
++++ b/node_modules/date-fns/locale/ja/_lib/formatLong/index.js
+@@ -21,7 +21,7 @@ var timeFormats = {
+   full: 'H時mm分ss秒 zzzz',
+   long: 'H:mm:ss z',
+   medium: 'H:mm:ss',
+-  short: 'H:mm'
++  short: 'H時mm分'
+ };
+ 
+ var dateTimeFormats = {
